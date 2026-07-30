@@ -41,4 +41,15 @@ The objective is to transform raw SaaS operational data into executive-ready ins
 
 ---
 
-> 🚧 This repository is currently being documented. Screenshots, architecture diagrams, and dbt lineage will be added shortly.
+## 🌟 Project Highlights
+
+- End-to-end Analytics Engineering workflow
+- Cloud data warehouse using Google BigQuery
+- Layered dbt architecture (Sources → Staging → Intermediate → Dimensions → Facts → Marts)
+- Star schema dimensional model
+- Executive Power BI dashboard
+- Customer Health Scoring
+- Revenue and Subscription Analytics
+- Payment Performance Monitoring
+- Interactive executive KPIs
+- GitHub documentation and version control
