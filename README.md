@@ -5,7 +5,7 @@
 ---
 ## Executive Dashboard
 
-![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/d7269be84d7fd72428380675a75d116b01c9c9c2/screenshots/Executive%20Dashboard.png)
+![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/c46b8a0b558e276c948c5daf616c4b1d204c83b0/screenshots/Executive%20Overview.png)
 
 
 ## 🚀 Project Overview
