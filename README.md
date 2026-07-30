@@ -17,7 +17,7 @@ The objective is to transform raw SaaS operational data into executive-ready ins
 - Executive Power BI dashboard
 - Revenue analytics
 - Customer health monitoring
-- Payment performance analysis
+- Payment performance analysis  
 - Customer risk analysis
 - Interactive KPI reporting
 
