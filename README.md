@@ -15,7 +15,7 @@
 
 ## Dbt_lineage
 
-![image_alt]
+![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/fcda90f50940a79f7c64e0b700efd0f27582875c/screenshots/dbt_lineage.png)
 
 ## 🚀 Project Overview
 
