@@ -1,9 +1,9 @@
-# 📊 SaaS Analytics Engineering Platform
+# SaaS Analytics Engineering Platform
 
 ### End-to-End Analytics Engineering Project using BigQuery, dbt Core & Power BI
 
 
-## 📑 Table of Contents
+## Table of Contents
 
 - Project Overview
 - Business Objectives
@@ -21,7 +21,7 @@
 ---
 
 
-## 📥 Power BI Report
+## Power BI Report
 
 The complete Power BI report is available in the `powerbi` folder.
 
@@ -39,7 +39,7 @@ Open the `.pbix` file using Power BI Desktop to explore:
 ![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/c46b8a0b558e276c948c5daf616c4b1d204c83b0/screenshots/Executive%20Overview.png)
 
 
-## 🚀 Project Overview
+## Project Overview
 
 This project demonstrates a complete Analytics Engineering workflow using **Google BigQuery**, **dbt Core**, and **Power BI**.
 
@@ -72,7 +72,7 @@ The Executive Dashboard was designed to help business leaders answer critical bu
 
 ---
 
-## 🛠 Technology Stack
+## Technology Stack
 
 | Layer | Technology |
 |--------|------------|
@@ -86,7 +86,7 @@ The Executive Dashboard was designed to help business leaders answer critical bu
 
 ---
 
-## 🌟 Project Highlights
+## Project Highlights
 
 - End-to-end Analytics Engineering workflow
 - Cloud data warehouse using Google BigQuery
