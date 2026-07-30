@@ -3,6 +3,10 @@
 ### End-to-End Analytics Engineering Project using BigQuery, dbt Core & Power BI
 
 ---
+## Executive Dashboard
+
+![Executive Dashboard](screenshots/executive_dashboard.png)
+
 
 ## 🚀 Project Overview
 
