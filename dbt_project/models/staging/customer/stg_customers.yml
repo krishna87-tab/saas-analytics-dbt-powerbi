@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Cleaned customer staging model."
+
+    columns:
+
+      - name: customer_id
+        description: "Unique customer identifier."
+        tests:
+          - unique
+          - not_null
+
+      - name: company_name
+        description: "Customer company name."
+        tests:
+          - not_null
+
+      - name: signup_date
+        description: "Customer signup date."

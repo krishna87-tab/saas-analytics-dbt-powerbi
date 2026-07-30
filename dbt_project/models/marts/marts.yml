@@ -1,0 +1,418 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: >
+      Customer dimension containing descriptive customer attributes.
+      One row per customer.
+
+    columns:
+      - name: customer_id
+        description: Unique identifier for the customer.
+        tests:
+          - unique
+          - not_null
+
+      - name: company_name
+        description: Name of the customer company.
+
+      - name: country
+        description: Country where the customer is located.
+
+      - name: region
+        description: Geographic region of the customer.
+
+      - name: industry
+        description: Industry segment of the customer.
+
+      - name: company_size
+        description: Customer company size classification.
+
+      - name: acquisition_channel
+        description: Marketing or sales channel through which the customer was acquired.
+
+      - name: signup_date
+        description: Date when the customer signed up.
+
+  - name: dim_plan
+    description: >
+      Subscription plan dimension containing plan attributes.
+      One row per subscription plan.
+
+    columns:
+      - name: plan_id
+        description: Unique identifier for the subscription plan.
+        tests:
+          - unique
+          - not_null
+
+      - name: plan_name
+        description: Name of the subscription plan.
+
+      - name: billing_period
+        description: Billing frequency for the subscription plan.
+
+      - name: monthly_price
+        description: Monthly subscription price.
+
+      - name: included_users
+        description: Maximum number of users included in the plan.
+
+      - name: included_events
+        description: Maximum number of events included in the plan.  
+
+  - name: dim_date
+    description: >
+      Calendar date dimension used across all fact tables.
+      One row per calendar date.
+
+    columns:
+      - name: date_day
+        description: Calendar date.
+        tests:
+          - unique
+          - not_null
+
+      - name: year
+        description: Calendar year.
+
+      - name: quarter
+        description: Calendar quarter.
+
+      - name: month
+        description: Calendar month number.
+
+      - name: month_name
+        description: Full month name.
+
+      - name: year_month
+        description: Year and month in YYYY-MM format.
+
+      - name: month_year
+        description: Month and year in Mon YYYY format.
+
+      - name: week
+        description: ISO week number.
+
+      - name: day_of_month
+        description: Day of the month.
+
+      - name: day_of_year
+        description: Day number within the year.
+
+      - name: day_of_week
+        description: Numeric day of week.
+
+      - name: day_name
+        description: Full day name.
+
+      - name: is_weekend
+        description: Indicates whether the date falls on a weekend.
+
+      - name: is_month_start
+        description: Indicates the first day of a month.
+
+      - name: is_month_end
+        description: Indicates the last day of a month.
+
+      - name: is_quarter_start
+        description: Indicates the first day of a calendar quarter.
+
+      - name: is_quarter_end
+        description: Indicates the last day of a calendar quarter.
+
+      - name: is_year_start
+        description: Indicates the first day of the year.
+
+      - name: is_year_end
+        description: Indicates the last day of the year.
+
+  - name: fct_revenue
+    description: >
+      Revenue fact table containing invoice and payment information.
+      One row per invoice.
+
+    columns:
+      - name: invoice_id
+        description: Unique identifier for the invoice.
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: Foreign key to the customer dimension.
+        tests:
+          - not_null
+
+      - name: subscription_id
+        description: Foreign key to the subscription associated with the invoice.
+
+      - name: plan_id
+        description: Foreign key to the subscription plan.
+        tests:
+          - not_null
+
+      - name: invoice_date
+        description: Date the invoice was generated.
+        tests:
+          - not_null
+
+      - name: subtotal
+        description: Invoice subtotal before discounts and taxes.
+
+      - name: discount_amount
+        description: Discount applied to the invoice.
+
+      - name: tax_amount
+        description: Tax charged on the invoice.
+
+      - name: total_amount
+        description: Total invoice amount after discounts and taxes.
+
+      - name: paid_amount
+        description: Amount received from the customer.
+
+      - name: invoice_status
+        description: Current status of the invoice.
+
+      - name: payment_status
+        description: Current payment status.
+
+      - name: payment_method
+        description: Payment method used by the customer.
+
+      - name: is_paid
+        description: Indicates whether the invoice has been paid.
+
+      - name: is_payment_late
+        description: Indicates whether the payment was received late.
+
+      - name: is_payment_failed
+        description: Indicates whether the payment failed.
+
+      - name: payment_category
+        description: Business-friendly payment category derived from the payment status.
+
+      - name: days_to_payment
+        description: Number of days between invoice generation and payment receipt.
+  
+  - name: fct_product_usage
+    description: >
+      Product usage fact table containing customer product adoption,
+      feature utilization, and engagement metrics.
+      One row per customer subscription per usage month.
+
+    columns:
+      - name: usage_id
+        description: Unique identifier for the usage record.
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: Foreign key to the customer dimension.
+        tests:
+          - not_null
+
+      - name: subscription_id
+        description: Foreign key to the subscription.
+
+      - name: plan_id
+        description: Foreign key to the plan dimension.
+        tests:
+          - not_null
+
+      - name: usage_month
+        description: Month for which the usage metrics were recorded.
+        tests:
+          - not_null
+
+      - name: subscription_status
+        description: Current status of the subscription.
+
+      - name: plan_name
+        description: Name of the subscription plan.
+
+      - name: billing_period
+        description: Billing frequency of the plan.
+
+      - name: monthly_price
+        description: Monthly subscription price.
+
+      - name: included_users
+        description: Maximum number of users included in the plan.
+
+      - name: included_events
+        description: Maximum number of events included in the plan.
+
+      - name: active_users
+        description: Number of active users during the usage month.
+
+      - name: events_used
+        description: Number of events consumed during the usage month.
+
+      - name: active_days
+        description: Number of active days during the usage month.
+
+      - name: api_calls
+        description: Number of API calls made.
+
+      - name: reports_created
+        description: Number of reports created.
+
+      - name: user_utilization_rate
+        description: Ratio of active users to included users.
+
+      - name: event_utilization_rate
+        description: Ratio of events used to included events.
+
+      - name: api_calls_per_user
+        description: Average API calls per active user.
+
+      - name: events_per_user
+        description: Average events used per active user.
+
+      - name: reports_per_user
+        description: Average reports created per active user.
+
+      - name: active_days_rate
+        description: Percentage of days the product was actively used during the month.
+
+  - name: fct_subscription_events
+    description: >
+      Subscription lifecycle fact table containing customer subscription
+      events such as new subscriptions, upgrades, downgrades, and churn.
+      One row per subscription event.
+
+    columns:
+      - name: event_id
+        description: Unique identifier for the subscription event.
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: Foreign key to the customer dimension.
+        tests:
+          - not_null
+
+      - name: subscription_id
+        description: Foreign key to the subscription.
+
+      - name: event_date
+        description: Date on which the subscription event occurred.
+        tests:
+          - not_null
+
+      - name: event_type
+        description: Type of subscription event.
+
+      - name: lifecycle_event
+        description: Business-friendly description of the lifecycle event.
+
+      - name: old_plan_id
+        description: Previous subscription plan identifier.
+
+      - name: old_plan_name
+        description: Name of the previous subscription plan.
+
+      - name: old_billing_period
+        description: Billing period of the previous plan.
+
+      - name: old_monthly_price
+        description: Monthly price of the previous plan.
+
+      - name: new_plan_id
+        description: New subscription plan identifier.
+
+      - name: new_plan_name
+        description: Name of the new subscription plan.
+
+      - name: new_billing_period
+        description: Billing period of the new plan.
+
+      - name: new_monthly_price
+        description: Monthly price of the new plan.
+
+      - name: mrr_change
+        description: Monthly Recurring Revenue (MRR) change resulting from the event.
+
+      - name: is_new_subscription
+        description: Indicates whether the event is a new subscription.
+
+      - name: is_upgrade
+        description: Indicates whether the event is an upgrade.
+
+      - name: is_downgrade
+        description: Indicates whether the event is a downgrade.
+
+      - name: is_churn
+        description: Indicates whether the event represents customer churn.
+
+
+  - name: fct_support
+    description: >
+      Support fact table containing customer support ticket metrics and
+      SLA performance. One row per support ticket.
+
+    columns:
+      - name: ticket_id
+        description: Unique identifier for the support ticket.
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: Foreign key to the customer dimension.
+        tests:
+          - not_null
+
+      - name: subscription_id
+        description: Foreign key to the subscription.
+
+      - name: created_date
+        description: Date the support ticket was created.
+        tests:
+          - not_null
+
+      - name: resolved_date
+        description: Date the support ticket was resolved.
+
+      - name: ticket_type
+        description: Type of support ticket.
+
+      - name: priority
+        description: Ticket priority level.
+
+      - name: ticket_status
+        description: Current status of the support ticket.
+
+      - name: subscription_status
+        description: Subscription status at the time of the ticket.
+
+      - name: first_response_hours
+        description: Hours taken to provide the first response.
+
+      - name: resolution_days
+        description: Number of days taken to resolve the ticket.
+
+      - name: ticket_age_days
+        description: Age of unresolved tickets in days.
+
+      - name: is_open_ticket
+        description: Indicates whether the ticket is currently open.
+
+      - name: is_resolved_ticket
+        description: Indicates whether the ticket has been resolved.
+
+      - name: is_escalated_ticket
+        description: Indicates whether the ticket has been escalated.
+
+      - name: is_high_priority
+        description: Indicates whether the ticket is high priority.
+
+      - name: is_urgent_priority
+        description: Indicates whether the ticket is marked as urgent.
+
+      - name: sla_met
+        description: Indicates whether the first response met the SLA target.

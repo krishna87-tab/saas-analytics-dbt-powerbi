@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_plans
+    description: "Subscription plan staging model."
+
+    columns:
+      - name: plan_id
+        tests:
+          - unique
+          - not_null
+
+      - name: plan_name
+        tests:
+          - not_null 

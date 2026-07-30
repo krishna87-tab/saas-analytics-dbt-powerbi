@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: stg_events
+    description: Staging model for subscription lifecycle events.
+
+    columns:
+
+      - name: event_id
+        description: Unique identifier for each subscription event.
+        tests:
+          - unique
+          - not_null
+
+      - name: subscription_id
+        description: Subscription associated with the event.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_subscription')
+              field: subscription_id
+
+      - name: customer_id
+        description: Customer associated with the event.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+
+      - name: event_date
+        description: Date the subscription event occurred.
+        tests:
+          - not_null
+
+      - name: event_type
+        description: Type of subscription lifecycle event.
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - CHURN
+                - NEW
+                - DOWNGRADE
+                - UPGRADE
+                
+
+      - name: old_plan_id
+        description: Previous plan before the event.
+
+      - name: new_plan_id
+        description: New plan after the event.
+
+      - name: mrr_change
+        description: Monthly recurring revenue change resulting from the event.

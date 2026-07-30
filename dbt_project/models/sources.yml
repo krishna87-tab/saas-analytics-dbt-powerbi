@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    database: saas-analytics-503006
+    schema: saas_raw
+
+    tables:
+      - name: customers
+      - name: plans
+      - name: subscription
+      - name: invoices
+      - name: payments
+      - name: usage
+      - name: events
+      - name: tickets

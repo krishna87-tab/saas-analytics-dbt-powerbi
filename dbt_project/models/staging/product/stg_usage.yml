@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: stg_usage
+    description: Staging model for monthly product usage metrics.
+
+    columns:
+
+      - name: usage_id
+        description: Unique identifier for each monthly usage record.
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: Customer associated with the usage record.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+
+      - name: subscription_id
+        description: Subscription associated with the usage record.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_subscription')
+              field: subscription_id
+
+      - name: usage_month
+        description: First day of the month representing the reporting period.
+        tests:
+          - not_null
+
+      - name: active_users
+        description: Number of active users during the month.
+        tests:
+          - not_null
+
+      - name: events_used
+        description: Total events processed during the month.
+        tests:
+          - not_null
+
+      - name: active_days
+        description: Number of days the customer was active during the month.
+        tests:
+          - not_null
+
+      - name: api_calls
+        description: Number of API calls made during the month.
+        tests:
+          - not_null
+
+      - name: reports_created
+        description: Number of reports generated during the month.
+        tests:
+          - not_null

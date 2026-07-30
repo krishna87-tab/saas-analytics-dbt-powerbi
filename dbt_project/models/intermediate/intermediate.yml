@@ -1,0 +1,214 @@
+version: 2
+
+models:
+  - name: int_customer_subscriptions
+    description: >
+      Enriched subscription model combining customer, subscription, and plan
+      information. Includes both the initial and current subscription plans
+      along with reusable subscription-level business metrics.
+
+    columns:
+      - name: customer_id
+        description: Unique identifier for the customer.
+        tests:
+          - not_null
+
+      - name: subscription_id
+        description: Unique identifier for the subscription.
+        tests:
+          - unique
+        
+
+      - name: subscription_status
+        description: Current status of the subscription.
+        tests:
+          - accepted_values:
+              values: ['ACTIVE', 'CHURNED']
+
+      - name: initial_plan_id
+        description: Plan selected when the subscription was created.
+        tests:
+          - relationships:
+              to: ref('stg_plans')
+              field: plan_id
+
+      - name: current_plan_id
+        description: Customer's current subscription plan.
+        tests:
+          - relationships:
+              to: ref('stg_plans')
+              field: plan_id
+
+      - name: plan_changed_flag
+        description: Indicates whether the customer changed plans after subscribing.
+
+      - name: subscription_length_days
+        description: Number of days the subscription has been active.
+
+
+  - name: int_revenue
+    description: >
+      Enriched revenue model combining invoices and payments. Contains invoice
+      details, payment information and reusable payment-related business metrics.
+
+    columns:
+      - name: invoice_id
+        description: Unique invoice identifier.
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: Customer associated with the invoice.
+        tests:
+          - not_null
+
+      - name: payment_status
+        description: Status of the payment.
+        tests:
+          - accepted_values:
+              values: ['PAID', 'FAILED', 'LATE']
+
+      - name: payment_category
+        description: Business-friendly payment classification.
+        tests:
+          - accepted_values:
+              values: ['Paid', 'Late', 'Failed', 'Unknown']
+
+      - name: is_paid
+        description: Indicates whether the invoice has been paid.
+
+      - name: is_payment_late
+        description: Indicates whether payment was received late.
+
+      - name: is_payment_failed
+        description: Indicates whether the payment failed.
+
+      - name: days_to_payment
+        description: Number of days between invoice generation and payment.
+
+
+  - name: int_product_adoption
+    description: >
+      Product usage model enriched with subscription and plan information.
+      Provides reusable customer adoption and utilization metrics.
+
+    columns:
+      - name: usage_id
+        description: Unique usage record identifier.
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: Customer associated with the usage record.
+        tests:
+          - not_null
+
+      - name: subscription_id
+        description: Subscription associated with the usage record.
+        tests:
+          - relationships:
+              to: ref('stg_subscription')
+              field: subscription_id
+
+      - name: user_utilization_rate
+        description: Ratio of active users to included users.
+
+      - name: event_utilization_rate
+        description: Ratio of events consumed to events included in the plan.
+
+      - name: api_calls_per_user
+        description: Average API calls per active user.
+
+      - name: events_per_user
+        description: Average events generated per active user.
+
+      - name: reports_per_user
+        description: Average reports created per active user.
+
+      - name: active_days_rate
+        description: Percentage of days active during the month.
+
+
+  - name: int_subscription_lifecycle
+    description: >
+      Subscription lifecycle model enriched with previous and new plan details.
+      Tracks customer lifecycle events and recurring revenue changes.
+
+    columns:
+      - name: event_id
+        description: Unique subscription event identifier.
+        tests:
+          - unique
+          - not_null
+
+      - name: event_type
+        description: Type of subscription lifecycle event.
+        tests:
+          - accepted_values:
+              values: ['NEW', 'UPGRADE', 'DOWNGRADE', 'CHURN']
+
+      - name: old_plan_id
+        description: Previous subscription plan.
+        tests:
+          - relationships:
+              to: ref('stg_plans')
+              field: plan_id
+
+      - name: new_plan_id
+        description: New subscription plan.
+        tests:
+          - relationships:
+              to: ref('stg_plans')
+              field: plan_id
+
+      - name: mrr_change
+        description: Monthly recurring revenue change resulting from the event.
+
+      - name: lifecycle_event
+        description: Business-friendly lifecycle classification.
+
+
+  - name: int_support_performance
+    description: >
+      Support ticket model enriched with subscription information. Provides
+      ticket-level operational metrics and SLA indicators.
+
+    columns:
+      - name: ticket_id
+        description: Unique support ticket identifier.
+        tests:
+          - unique
+          - not_null
+
+      - name: ticket_status
+        description: Current ticket status.
+        tests:
+          - accepted_values:
+              values: ['OPEN', 'RESOLVED', 'ESCALATED']
+
+      - name: priority
+        description: Ticket priority.
+        tests:
+          - accepted_values:
+              values: ['LOW', 'MEDIUM', 'HIGH', 'URGENT']
+
+      - name: subscription_id
+        description: Subscription associated with the support ticket.
+        tests:
+          - relationships:
+              to: ref('stg_subscription')
+              field: subscription_id
+
+      - name: resolution_days
+        description: Number of days taken to resolve the ticket.
+
+      - name: ticket_age_days
+        description: Number of days the ticket has remained open.
+
+      - name: first_response_hours
+        description: Time taken to provide the first response.
+
+      - name: sla_met
+        description: Indicates whether the first response met the SLA.

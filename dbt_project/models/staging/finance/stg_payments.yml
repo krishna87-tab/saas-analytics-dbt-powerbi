@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: stg_payments
+    description: Staging model for customer payment transactions.
+
+    columns:
+
+      - name: payment_id
+        description: Unique identifier for each payment.
+        tests:
+          - unique
+          - not_null
+
+      - name: invoice_id
+        description: Associated invoice.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_invoices')
+              field: invoice_id
+
+      - name: customer_id
+        description: Customer who made the payment.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+
+      - name: payment_date
+        description: Date the payment was received. This may be null for payments that have not yet been completed.
+        
+
+      - name: payment_method
+        description: Payment channel used.
+        tests:
+          - not_null
+
+      - name: payment_status
+        description: Status of the payment.
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - PAID
+                - FAILED
+                - LATE
+
+      - name: paid_amount
+        description: Amount successfully paid.
+        tests:
+          - not_null

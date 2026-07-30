@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_invoices
+    description: Staging model for invoice transactions.
+
+    columns:
+      - name: invoice_id
+        tests:
+          - unique
+          - not_null
+
+      - name: subscription_id
+        tests:
+          - not_null
+
+      - name: customer_id
+        tests:
+          - not_null
+
+      - name: invoice_date
+        tests:
+          - not_null
+
+      - name: invoice_status
+        tests:
+          - not_null

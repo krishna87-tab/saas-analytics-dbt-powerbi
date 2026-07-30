@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: stg_tickets
+    description: Staging model for customer support tickets.
+
+    columns:
+
+      - name: ticket_id
+        description: Unique identifier for each support ticket.
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: Customer who raised the support ticket.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+
+      - name: subscription_id
+        description: Subscription related to the support ticket.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_subscription')
+              field: subscription_id
+
+      - name: created_date
+        description: Date the support ticket was created.
+        tests:
+          - not_null
+
+      - name: resolved_date
+        description: Date the support ticket was resolved.
+
+      - name: ticket_type
+        description: Category of the support ticket.
+        tests:
+          - not_null
+
+      - name: priority
+        description: Priority assigned to the support ticket.
+        tests:
+          - not_null
+
+      - name: ticket_status
+        description: Current status of the support ticket.
+        tests:
+          - not_null
+
+      - name: first_response_hours
+        description: Time taken to provide the first response to the customer.
+        tests:
+          - not_null

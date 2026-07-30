@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_subscription
+    description: Staging model for customer subscriptions.
+
+    columns:
+
+      - name: subscription_id
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        tests:
+          - not_null
+
+      - name: start_date
+        tests:
+          - not_null
+
+      - name: subscription_status
+        tests:
+          - not_null
