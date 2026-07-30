@@ -2,7 +2,25 @@
 
 ### End-to-End Analytics Engineering Project using BigQuery, dbt Core & Power BI
 
+
+## 📑 Table of Contents
+
+- Project Overview
+- Business Objectives
+- Technology Stack
+- Project Highlights
+- Data Architecture
+- dbt Lineage
+- Power BI Semantic Model
+- Dashboard Features
+- KPIs
+- Repository Structure
+- Future Enhancements
+- About
+
 ---
+
+
 ## Executive Dashboard
 
 ![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/c46b8a0b558e276c948c5daf616c4b1d204c83b0/screenshots/Executive%20Overview.png)
@@ -101,7 +119,7 @@ Power BI Executive Dashboard
 
 ---
 
-## Dbt_lineage
+## dbt Project Lineage
 
 ![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/fcda90f50940a79f7c64e0b700efd0f27582875c/screenshots/dbt_lineage.png)
 
@@ -171,6 +189,21 @@ saas-analytics-dbt-powerbi
 - Automated Data Quality Monitoring
 
 ---
+
+
+## Learning Outcomes
+
+This project demonstrates practical experience with:
+
+- Analytics Engineering
+- Cloud Data Warehousing
+- dbt Data Transformation
+- Dimensional Modeling
+- SQL Development
+- Power BI Dashboard Design
+- Business KPI Development
+- Git & GitHub Version Control
+
 
 # About This Project
 
