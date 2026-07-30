@@ -7,7 +7,9 @@
 
 ![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/d7269be84d7fd72428380675a75d116b01c9c9c2/screenshots/Executive%20Dashboard.png)
 
-![image_alt]
+## Data Model
+
+![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/20a6371c5a764aa9924fd1db09fdb9e99db3e1a7/screenshots/SaaS%20Data%20Model.png)
 
 
 ## 🚀 Project Overview
