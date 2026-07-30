@@ -21,6 +21,19 @@
 ---
 
 
+## 📥 Power BI Report
+
+The complete Power BI report is available in the `powerbi` folder.
+
+Open the `.pbix` file using Power BI Desktop to explore:
+
+- Executive Dashboard
+- Customer Health Analytics
+- Interactive filters
+- DAX measures
+- Data model
+
+
 ## Executive Dashboard
 
 ![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/c46b8a0b558e276c948c5daf616c4b1d204c83b0/screenshots/Executive%20Overview.png)
