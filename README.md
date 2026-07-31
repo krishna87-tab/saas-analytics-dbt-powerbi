@@ -34,16 +34,21 @@ Open the `.pbix` file using Power BI Desktop to explore:
 - Data model
 
 
-## Executive Dashboard
-
-![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/c46b8a0b558e276c948c5daf616c4b1d204c83b0/screenshots/Executive%20Overview.png)
-
-
 ## Project Overview
 
 This project demonstrates a complete Analytics Engineering workflow using **Google BigQuery**, **dbt Core**, and **Power BI**.
 
 The objective is to transform raw SaaS operational data into executive-ready insights using a modern layered data architecture and interactive dashboards.
+
+
+## Architecture Diagram
+
+![image_alt]
+
+
+## Executive Dashboard
+
+![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/c46b8a0b558e276c948c5daf616c4b1d204c83b0/screenshots/Executive%20Overview.png)
 
 
 # Business Objectives
