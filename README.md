@@ -43,7 +43,7 @@ The objective is to transform raw SaaS operational data into executive-ready ins
 
 ## Architecture Diagram
 
-![image_alt]
+![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/3c9bcfadc203746a1163d29cee5d1487aee9a50f/screenshots/Architecture%20Diagram.png)
 
 
 ## Executive Dashboard
