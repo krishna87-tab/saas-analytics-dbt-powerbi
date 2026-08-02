@@ -141,26 +141,23 @@ customer_health_scores as (
 
         cm.*,
 
-        -- Payment Health
         case
             when coalesce(failed_payment_count,0) > 0 then 'Poor'
             when coalesce(late_payment_count,0) >= 2 then 'Average'
             else 'Good'
         end as payment_health,
 
-        -- Usage Health
         case
             when coalesce(avg_user_utilization,0) >= 0.80 then 'High'
             when coalesce(avg_user_utilization,0) >= 0.50 then 'Medium'
             else 'Low'
         end as usage_health,
 
-        -- Support Health
-        case
-            when coalesce(sla_percentage,0) >= 0.90 then 'Excellent'
-            when coalesce(sla_percentage,0) >= 0.70 then 'Good'
-            else 'Needs Attention'
-        end as support_health,
+        CASE
+            WHEN COALESCE(sla_percentage,0) >= 0.80 THEN 'Excellent'
+            WHEN COALESCE(sla_percentage,0) >= 0.60 THEN 'Good'
+            ELSE 'Needs Attention'
+        END AS support_health,
 
         (
             case when subscription_status = 'ACTIVE' then 20 else 0 end
