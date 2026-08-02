@@ -63,11 +63,17 @@ select
     end as is_urgent_priority,
 
     case
-        when t.first_response_hours <= 8 then true
-        else false
+        when priority = 'URGENT' and first_response_hours <= 4 then true
+        when priority = 'HIGH'   and first_response_hours <= 8 then true
+        when priority = 'MEDIUM' and first_response_hours <= 24 then true
+        when priority = 'LOW'    and first_response_hours <= 48 then true
+    else false
     end as sla_met
 
 from tickets t
+
+left join subscriptions s
+    on t.subscription_id = s.subscription_id
 
 left join subscriptions s
     on t.subscription_id = s.subscription_id
