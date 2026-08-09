@@ -494,6 +494,8 @@ Google Cloud CLI
 Power BI Desktop
 ```
 ```
+dbt core:
+
 Install dbt
 
 pip install dbt-core
