@@ -20,30 +20,30 @@ The project combines dbt Core, BigQuery, SQL and Power BI totransform raw SaaS o
 
 The final Power BI report contains four business-focused pages:
 
-``` 
-Executive Overview :- Revenue, customer health and overallbusiness performance
-```
+
+1.Executive Overview :- Revenue, customer health and overallbusiness performance
+
 
 ![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/eb134649eae1c178f0321f2e0eb95e34a28d8fcd/screenshots/_Executive%20Insights.png)
 
 
-```
-Operations Insights :- Product adoption, support performanceand payment health
-```
+
+2.Operations Insights :- Product adoption, support performanceand payment health
+
 
 ![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/28b8571c8adb60896375ac0f64025ddd954895b9/screenshots/Operational%20Insights.png)
 
 
-```
-Customer Risk & Retention :- Churn, customer risk,revenue-at-risk and risk drivers
-```
+
+3.Customer Risk & Retention :- Churn, customer risk,revenue-at-risk and risk drivers
+
 
 ![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/1be37f6fee9b423bf2b3ea99a54a2e4d2fd093dc/screenshots/Retention.png)
 
 
-``` 
-Growth & Expansion :- Expansion-ready customers, adoption andrevenue opportunities
-```
+
+4.Growth & Expansion :- Expansion-ready customers, adoption andrevenue opportunities
+
 
 ![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/6b4f19d679b1c65d1cc8a749bcf4b27ce63ef058/screenshots/Expansion.png)
 
