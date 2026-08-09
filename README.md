@@ -38,7 +38,7 @@ The project combines dbt Core, BigQuery, SQL and Power BI totransform raw SaaS o
 
 ## Data Lineage
 
-![image_alt]
+![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/a8316ffe1470bb05c2d994fdc1650647ab8a9a51/screenshots/dbt_lineage.png)
 
 ## Business Objective
 
