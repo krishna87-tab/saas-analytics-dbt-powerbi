@@ -557,7 +557,7 @@ Operational performance
 Expansion potential
 
 ## How to Run the Project
-
+```
 Prerequisites
 
 Install:
@@ -608,7 +608,7 @@ Generate documentation
 
 dbt docs generate
 dbt docs serve
-
+```
 # Source Data
 
 The project uses simulated SaaS operational datasets representing areassuch as:
@@ -638,7 +638,7 @@ This is a portfolio / simulated SaaS analytics project and does notrepresent con
 Business conclusions are therefore illustrative and demonstrate theanalytical approach rather than representing real company performance.
 
 # Author
-
+```
 Krishna Kamal Gogoi
 
 Analytics / BI professional focused on:
@@ -656,7 +656,7 @@ Power BI
 Data Modeling
 
 Customer & Revenue Analytics
-
+```
 ## Project Outcome
 
 This project demonstrates an end-to-end workflow:
