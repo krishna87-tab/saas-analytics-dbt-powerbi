@@ -509,7 +509,7 @@ gcloud auth application-default login
 
 Set the appropriate Google Cloud project:
 
-gcloud config set project <YOUR_PROJECT_ID>
+gcloud config set project <PROJECT_ID>
 
 Install dbt packages
 
