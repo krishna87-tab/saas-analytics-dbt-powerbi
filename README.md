@@ -2,7 +2,7 @@ SaaS Analytics --- Customer Health, Retention & Growth
 
 ## Project Overview
 
-This project is an end-to-end SaaS Analytics / Analytics Engineeringsolution built to answer four core business questions:
+# This project is an end-to-end SaaS Analytics / Analytics Engineeringsolution built to answer four core business questions:
 
 How is the SaaS business performing financially?
 
@@ -14,7 +14,7 @@ Where are the strongest opportunities for expansion and growth?
 
 The project combines dbt Core, BigQuery, SQL and Power BI totransform raw SaaS operational data into tested analytical models and anexecutive-ready BI solution.
 
-The final Power BI report contains four business-focused pages:
+# The final Power BI report contains four business-focused pages:
 
 Executive Overview --- Revenue, customer health and overallbusiness performance
 
@@ -91,10 +91,11 @@ Power BI Semantic Model
 Executive SaaS Analytics Dashboard
 ```
 ## Technology Stack
-
+```
 Area                 Technology
 
 Data Warehouse       Google BigQueryTransformation       dbt CoreSQL                  SQLBI / Visualization   Microsoft Power BIData Modeling        Dimensional / analytical modelingTesting              dbt generic testsPackages             dbt-utilsSource Data          SaaS operational CSV datasetsVersion Control      Git / GitHub
+```
 ```
 📂 dbt Project Structure
 
