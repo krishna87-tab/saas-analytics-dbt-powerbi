@@ -1,6 +1,6 @@
-SaaS Analytics --- Customer Health, Retention & Growth
+## SaaS Analytics --- Customer Health, Retention & Growth
 
-## Project Overview
+# Project Overview
 
 # This project is an end-to-end SaaS Analytics / Analytics Engineeringsolution built to answer four core business questions:
 
@@ -13,6 +13,10 @@ Which customers are at risk of churn or revenue loss?
 Where are the strongest opportunities for expansion and growth?
 
 The project combines dbt Core, BigQuery, SQL and Power BI totransform raw SaaS operational data into tested analytical models and anexecutive-ready BI solution.
+
+# Project Architecture
+
+![image_alt]
 
 # The final Power BI report contains four business-focused pages:
 
@@ -29,6 +33,10 @@ The project combines dbt Core, BigQuery, SQL and Power BI totransform raw SaaS o
 ![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/1be37f6fee9b423bf2b3ea99a54a2e4d2fd093dc/screenshots/Retention.png)
 
 # Growth & Expansion --- Expansion-ready customers, adoption andrevenue opportunities
+
+![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/6b4f19d679b1c65d1cc8a749bcf4b27ce63ef058/screenshots/Expansion.png)
+
+## Data Lineage
 
 ![image_alt]
 
