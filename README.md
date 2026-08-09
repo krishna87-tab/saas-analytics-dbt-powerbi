@@ -492,7 +492,8 @@ dbt-bigquery adapter
 Google Cloud CLI
 
 Power BI Desktop
-
+```
+```
 Install dbt
 
 pip install dbt-core
@@ -524,7 +525,9 @@ dbt run
 Run tests
 
 dbt test
+```
 
+```
 Generate documentation
 
 dbt docs generate
