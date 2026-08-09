@@ -17,7 +17,7 @@ The project combines dbt Core, BigQuery, SQL and Power BI totransform raw SaaS o
 # The final Power BI report contains four business-focused pages:
 
 Executive Overview --- Revenue, customer health and overallbusiness performance
-![image_alt]
+![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/e41a545397cf550e8144e9fcf3cd5b6e880afc0d/screenshots/Executive%20Overview.png)
 Operations Insights --- Product adoption, support performanceand payment health
 ![image_alt]
 Customer Risk & Retention --- Churn, customer risk,revenue-at-risk and risk drivers
