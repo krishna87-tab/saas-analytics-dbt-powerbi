@@ -1,6 +1,6 @@
 SaaS Analytics --- Customer Health, Retention & Growth
 
-📌 Project Overview
+## Project Overview
 
 This project is an end-to-end SaaS Analytics / Analytics Engineeringsolution built to answer four core business questions:
 
@@ -24,7 +24,7 @@ Customer Risk & Retention --- Churn, customer risk,revenue-at-risk and risk driv
 
 Growth & Expansion --- Expansion-ready customers, adoption andrevenue opportunities
 
-🎯 Business Objective
+## Business Objective
 
 SaaS companies need to manage more than revenue growth. Sustainablegrowth depends on understanding:
 
@@ -44,7 +44,7 @@ Expansion potential
 
 This project turns those operational signals into a unifiedcustomer-health framework so that leadership and customer-facing teamscan identify where revenue is healthy, where it is at risk, and whereexpansion opportunities exist.
 
-🏗️ Solution Architecture
+## Solution Architecture
 ```
 Raw SaaS CSV Data
        │
@@ -90,12 +90,12 @@ Power BI Semantic Model
        ▼
 Executive SaaS Analytics Dashboard
 ```
-🛠️ Technology Stack
+## Technology Stack
 
 Area                 Technology
 
 Data Warehouse       Google BigQueryTransformation       dbt CoreSQL                  SQLBI / Visualization   Microsoft Power BIData Modeling        Dimensional / analytical modelingTesting              dbt generic testsPackages             dbt-utilsSource Data          SaaS operational CSV datasetsVersion Control      Git / GitHub
-
+```
 📂 dbt Project Structure
 
 saas_dbt_project/
@@ -134,10 +134,11 @@ saas_dbt_project/
 ├── tests/
 ├── dbt_project.yml
 └── README.md
+```
 
-🔄 Data Transformation Approach
+## Data Transformation Approach
 
-The project follows a layered dbt architecture.
+# The project follows a layered dbt architecture.
 
 1. Staging Layer
 
@@ -241,7 +242,7 @@ Payment behaviour
 
 into a unified customer-health view.
 
-❤️ Customer Health Framework
+## Customer Health Framework
 
 Customer health is evaluated across multiple dimensions.
 
@@ -269,7 +270,7 @@ SLA Performance Classification
 
 These signals are combined with subscription and behavioural indicatorsto identify customers requiring attention and customers with expansionpotential.
 
-📊 Power BI Dashboard
+## Power BI Dashboard
 
 1. Executive Overview
 
@@ -393,7 +394,7 @@ Key business question
 
 Which customers and segments have the strongest potential for upsellor expansion?
 
-🔍 Example Business Insights
+## Example Business Insights
 
 The dashboard is designed to surface actionable insights rather thansimply report metrics.
 
@@ -417,7 +418,7 @@ Revenue-at-risk varies materially by acquisition channel andindustry.
 
 These insights demonstrate how operational SaaS data can be translatedinto retention and revenue-growth decisions.
 
-🧪 Data Quality & Testing
+ ## Data Quality & Testing
 
 The dbt project includes automated data-quality testing across thetransformation pipeline.
 
@@ -442,7 +443,7 @@ dbt test
 
 The final models were validated through successful dbt runs and datatests before being consumed by Power BI.
 
-📈 Analytics Engineering Practices Demonstrated
+## Analytics Engineering Practices Demonstrated
 
 This project demonstrates practical experience with:
 
@@ -474,7 +475,7 @@ Executive dashboard design
 
 Business-focused storytelling
 
-💼 Business Value
+## Business Value
 
 The solution can support several SaaS business functions:
 
@@ -530,7 +531,7 @@ Operational performance
 
 Expansion potential
 
-🚀 How to Run the Project
+## How to Run the Project
 
 Prerequisites
 
@@ -583,7 +584,7 @@ Generate documentation
 dbt docs generate
 dbt docs serve
 
-📁 Source Data
+# Source Data
 
 The project uses simulated SaaS operational datasets representing areassuch as:
 
@@ -605,13 +606,13 @@ Support tickets
 
 The data is used for portfolio and analytical-engineering demonstrationpurposes.
 
-⚠️ Important Note
+# Important Note
 
 This is a portfolio / simulated SaaS analytics project and does notrepresent confidential production data from an actual SaaS company.
 
 Business conclusions are therefore illustrative and demonstrate theanalytical approach rather than representing real company performance.
 
-👤 Author
+# Author
 
 Krishna Kamal Gogoi
 
@@ -631,7 +632,7 @@ Data Modeling
 
 Customer & Revenue Analytics
 
-⭐ Project Outcome
+## Project Outcome
 
 This project demonstrates an end-to-end workflow:
 
