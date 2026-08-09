@@ -91,11 +91,19 @@ Power BI Semantic Model
 Executive SaaS Analytics Dashboard
 ```
 ## Technology Stack
-```
-Area                 Technology
 
-Data Warehouse       Google BigQueryTransformation       dbt CoreSQL                  SQLBI / Visualization   Microsoft Power BIData Modeling        Dimensional / analytical modelingTesting              dbt generic testsPackages             dbt-utilsSource Data          SaaS operational CSV datasetsVersion Control      Git / GitHub
-```
+| Area | Technology |
+|---|---|
+| Data Warehouse | Google BigQuery |
+| Transformation | dbt Core |
+| SQL | SQL |
+| BI / Visualization | Microsoft Power BI |
+| Data Modeling | Dimensional / analytical modeling |
+| Testing | dbt generic tests |
+| Packages | dbt-utils |
+| Source Data | SaaS operational CSV datasets |
+| Version Control | Git / GitHub |
+
 ```
 📂 dbt Project Structure
 
