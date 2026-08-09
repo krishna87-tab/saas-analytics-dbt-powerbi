@@ -5,7 +5,7 @@
 ## This project is an end-to-end SaaS Analytics / Analytics Engineeringsolution built to answer four core business questions:
 
 How is the SaaS business performing financially?
-
+ 
 Where are operational and customer-health issues affectingretention?
 
 Which customers are at risk of churn or revenue loss?
