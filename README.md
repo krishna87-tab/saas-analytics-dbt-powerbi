@@ -16,7 +16,7 @@ The project combines dbt Core, BigQuery, SQL and Power BI totransform raw SaaS o
 
 # Project Architecture
 
-![image_alt]
+![image_alt](https://github.com/krishna87-tab/saas-analytics-dbt-powerbi/blob/2874bf2a28d6a15eb506018b3ab6512610146fde/screenshots/Architecture%20Diagram.png)
 
 # The final Power BI report contains four business-focused pages:
 
