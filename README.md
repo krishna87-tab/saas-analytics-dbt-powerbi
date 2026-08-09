@@ -1,4 +1,4 @@
-## SaaS Analytics --- Customer Health, Retention & Growth
+# SaaS Analytics --- Customer Health, Retention & Growth
 
 # Project Overview
 
@@ -164,19 +164,15 @@ saas_dbt_project/
 ## Data Transformation Approach
 
 # The project follows a layered dbt architecture.
-
+```
 1. Staging Layer
 
 The staging layer standardizes raw source data through:
 
 Data type casting
-
 Column naming and normalization
-
 Status standardization
-
 Basic source-level transformations
-
 Clean analytical field definitions
 
 2. Intermediate Layer
@@ -185,56 +181,27 @@ The intermediate models combine business entities and create reusableanalytical 
 
 Examples include:
 
-Customer subscriptions
-
-Combines subscription, invoice and payment information to identify:
-
-Paid payments
-
-Late payments
-
-Failed payments
-
-Payment categories
-
+Customer subscriptions, Combines subscription, 
+invoice and payment information to identify: Paid payments, Late payments, Failed payments, Payment categories
 Revenue
-
 Creates customer-level and invoice-level revenue metrics.
-
 Product adoption
-
 Calculates behavioural usage metrics such as:
-
 Active users
-
 User utilization
-
 Event utilization
-
 API calls per user
-
 Events per user
-
 Reports created
-
 Active-days rate
-
 Support performance
-
 Creates operational support KPIs including:
-
 Ticket volume
-
 Resolution performance
-
 Escalations
-
 High-priority tickets
-
 First-response time
-
 Resolution time
-
 SLA performance
 
 3. Dimension & Fact Layer
@@ -242,31 +209,21 @@ SLA performance
 The analytical model includes:
 
 dim_customer
-
 dim_plan
-
 dim_date
-
 fct_revenue
-
-This separates reusable business dimensions from measurable businessevents.
 
 4. Customer Health Mart
 
 The customer_health_mart combines:
 
 Customer profile
-
 Revenue performance
-
 Product usage
-
 Support performance
-
 Payment behaviour
-
 into a unified customer-health view.
-
+```
 ## Customer Health Framework
 
 Customer health is evaluated across multiple dimensions.
