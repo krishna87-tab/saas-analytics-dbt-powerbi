@@ -255,127 +255,78 @@ These signals are combined with subscription and behavioural indicatorsto identi
 ## Power BI Dashboard
 
 1. Executive Overview
-
+```
 Provides an executive-level view of:
 
 Revenue
-
 Active customers
-
 Revenue at risk
-
 Payment success
-
 At-risk customers
-
 Average customer-health score
-
 Customer health distribution
-
 Monthly revenue growth
-
 Health score by region
-
 Major risk drivers
-
 Customer-level health details
 
-Key business question
-
-Is the SaaS business growing, and is that growth supported byhealthy customers?
-
+Key business question : Is the SaaS business growing, and is that growth supported byhealthy customers?
+```
 2. Operations Insights
-
+```
 Focuses on customer adoption and operational performance.
 
 Key metrics include:
-
 Healthy customers
-
 Average active users
-
 Average resolution days
-
 High-priority tickets
-
 Events per user
-
 Average API calls
-
 Usage health distribution
-
 Support health
-
 Payment health
-
 Active users by plan
-
 Resolution performance by region
-
 High-priority tickets by region
 
-Key business question
-
-What operational signals explain customer engagement and servicequality?
-
+Key business question : What operational signals explain customer engagement and servicequality?
+```
 3. Customer Risk & Retention
-
+```
 Focuses on identifying customers and revenue most exposed to churn.
 
 Key metrics include:
-
 Active customers
-
 Churned customers
-
 Churn rate
-
 Critical customers
-
 Critical customer percentage
-
 Revenue risk by region
-
 Churn by region
-
 Revenue risk by plan
-
 Revenue risk by acquisition channel
-
 Revenue at risk by industry
 
-Key business question
-
-Where is the company most exposed to customer churn and revenueloss?
-
+Key business question : Where is the company most exposed to customer churn and revenueloss?
+```
 4. Growth & Expansion
-
+```
 Identifies customers with strong product adoption and expansionpotential.
 
 Key metrics include:
-
 Expansion-ready customers
-
 Expansion revenue
-
 Expansion revenue percentage
-
 High-adoption customers
-
 Event utilization
-
 User utilization
-
 Expansion-ready customers by plan
-
 Product adoption by plan
-
 Expansion revenue by region
 
-Key business question
-
-Which customers and segments have the strongest potential for upsellor expansion?
-
+Key business question : Which customers and segments have the strongest potential for upsellor expansion?
+```
 ## Example Business Insights
 
 The dashboard is designed to surface actionable insights rather thansimply report metrics.
